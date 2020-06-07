@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/myImage"
+        android:layout_width="160dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/tv_repass_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15sp"
+        android:text="换一个"
+        android:textColor="#3399FF" />
+
+    <EditText
+        android:id="@+id/et_repass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_con"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证" />
+
+</LinearLayout>
