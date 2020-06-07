@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.example.drawzhuzhuangmoredata.MyView
+        android:id="@+id/myview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.example.drawzhuzhuangmoredata.MyView>
+
+    <ListView
+        android:id="@+id/lv_show_data"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+    </ListView>
+
+</RelativeLayout>
