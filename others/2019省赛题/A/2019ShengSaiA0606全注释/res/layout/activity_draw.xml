@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrawActivity" >
+
+    <com.example.shengsaia06062019.MyView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.example.shengsaia06062019.MyView>
+
+    <TextView
+        android:id="@+id/tv_draw_roomnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="23dp"
+        android:text="房间号："
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_draw_roomnumber"
+        android:layout_centerHorizontal="true"
+        android:text="温度折状图"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
