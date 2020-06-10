@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinkActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/sp_1"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:entries="@array/ill_temp_hum" />
+
+        <Spinner
+            android:id="@+id/sp_2"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:entries="@array/big_small" />
+
+        <EditText
+            android:id="@+id/et_link_number"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+
+        <Spinner
+            android:id="@+id/sp_3"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:entries="@array/fan_lamp_cur" />
+
+        <Spinner
+            android:id="@+id/sp_4"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:entries="@array/open_cls" />
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/sw_link_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:text="联动开关" />
+
+    <TextView
+        android:id="@+id/tv_link_roomnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
