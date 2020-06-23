@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shengsaib06232019"
+    package="com.example.shengsai06202019"
     android:versionCode="1"
     android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -12,9 +14,9 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Holo.Light" >
         <activity
-            android:name="com.example.shengsaib06232019.MainActivity"
+            android:name="com.example.shengsai06202019.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,15 +25,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.shengsaib06232019.LoginActivity"
+            android:name="com.example.shengsai06202019.LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
         <activity
-            android:name="com.example.shengsaib06232019.UnLockActivity"
+            android:name="com.example.shengsai06202019.UnLockActivity"
             android:label="@string/title_activity_un_lock" >
         </activity>
         <activity
-            android:name="com.example.shengsaib06232019.BarActivity"
+            android:name="com.example.shengsai06202019.fragment.BarActivity"
             android:label="@string/title_activity_bar" >
         </activity>
     </application>

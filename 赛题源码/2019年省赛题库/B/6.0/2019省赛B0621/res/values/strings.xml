@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">2019省赛B0623</string>
+    <string name="app_name">智能家居</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_un_lock">UnLockActivity</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_activity_bar">BarActivity</string>
 
     <string-array name="big_small">
         <item>></item>
@@ -14,12 +20,5 @@
         <item>湿度</item>
         <item>光照</item>
     </string-array>
-
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_un_lock">UnLockActivity</string>
-    <string name="title_activity_bar">BarActivity</string>
-    <string name="title_section3">Section 3</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section1">Section 1</string>
 
 </resources>
