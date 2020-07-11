@@ -98,7 +98,7 @@ public class ControlFragment extends Fragment {
 				}
 			}
 		});
-		tg_kt.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+		tg_tv.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView,

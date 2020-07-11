@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bizideal.smarthome.socket.ControlUtils;
 import com.example.shengsaid07032019.R;
 import com.example.shengsaid07032019.tools.AppTools;
 
@@ -44,10 +45,10 @@ public class BaseFragment extends Fragment {
 			tv_temp.setText(String.valueOf(AppTools.temp));
 			iv_hum.setRotation(AppTools.hum);
 			iv_temp.setRotation(AppTools.temp);
-			if (AppTools.gas > 100) {
-				handler.removeCallbacks(timeRunnable);
-				System.exit(0);
-			}
+			// if (AppTools.gas >= 100) {
+			// handler.removeCallbacks(timeRunnable);
+			// System.exit(0);
+			// }
 			handler.postDelayed(timeRunnable, 1000);
 		}
 	};

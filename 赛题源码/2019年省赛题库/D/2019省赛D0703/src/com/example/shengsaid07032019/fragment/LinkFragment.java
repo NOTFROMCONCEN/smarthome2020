@@ -198,7 +198,7 @@ public class LinkFragment extends Fragment {
 					}
 					if (shebei_warm) {
 						ControlUtils.control(ConstantUtil.WarningLight,
-								ConstantUtil.CHANNEL_ALL, ConstantUtil.CLOSE);
+								ConstantUtil.CHANNEL_ALL, ConstantUtil.OPEN);
 					}
 				} else {
 					if (shebei_cur) {
