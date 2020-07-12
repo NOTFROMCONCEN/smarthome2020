@@ -41,7 +41,7 @@ public class AppConfig {
 						if (!TextUtils.isEmpty(getdata.getIllumination())) {
 							ill = Float.valueOf(getdata.getIllumination());
 							if (ill == 100) {
-								System.exit(0);
+								System.exit(1000);
 							}
 						}
 						if (!TextUtils.isEmpty(getdata.getPM25())) {
