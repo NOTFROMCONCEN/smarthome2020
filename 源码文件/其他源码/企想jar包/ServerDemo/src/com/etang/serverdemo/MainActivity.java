@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.TextView;
 
+import com.etang.serverdemo.LinkTools.ConstantUtil;
 import com.etang.serverdemo.LinkTools.ControlUtils;
 import com.etang.serverdemo.LinkTools.DataCallback;
 import com.etang.serverdemo.LinkTools.DeviceBean;
@@ -19,7 +20,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		ControlUtils.setUser("bizideal", "123456", "18.1.10.2");
+		tv_link_state = (TextView) findViewById(R.id.tv_link_state);
+		ControlUtils.setUser("bizideal", "123456", "18.1.10.7");
 		SocketClient.getInstance().creatConnect();
 		SocketClient.getInstance().login(new LoginCallback() {
 
@@ -33,6 +35,12 @@ public class MainActivity extends Activity {
 						// TODO Auto-generated method stub
 						System.out.println(paramString);
 						tv_link_state.setText(paramString);
+						if (paramString.equals("Success")) {
+							ControlUtils
+									.control(ConstantUtil.Lamp,
+											ConstantUtil.CHANNEL_ALL,
+											ConstantUtil.OPEN);
+						}
 					}
 				});
 			}
@@ -50,6 +58,9 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				if (!TextUtils.isEmpty(getdata.getAirPressure())) {
 					System.out.println(getdata.getAirPressure());
+				}
+				if (!TextUtils.isEmpty(getdata.getTemperature())) {
+					System.out.println(getdata.getTemperature());
 				}
 			}
 		});

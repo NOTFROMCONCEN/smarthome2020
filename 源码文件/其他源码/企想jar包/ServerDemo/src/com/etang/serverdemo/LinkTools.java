@@ -51,7 +51,7 @@ public interface LinkTools {
 		private long sendTime = 0L;
 
 		// 默认IP地址
-		public static String ip = "10.1.3.168";
+		public static String ip = "18.1.10.7";
 
 		// 默认端口地址
 		int port = 6006;
