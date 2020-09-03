@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".BbarActivity" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/radioGroup1" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/radioGroup1"
+        android:layout_width="200sp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="25sp" >
+
+            <RadioButton
+                android:id="@+id/ra_base"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radio_select_back"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="环境监测"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/ra_control"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radio_select_back"
+                android:button="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="家电控制"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/ra_link"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radio_select_back"
+                android:button="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="情景模式"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/ra_op"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radio_select_back"
+                android:button="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="账号管理"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>
