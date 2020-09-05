@@ -204,7 +204,7 @@ public class BaseFragment extends Fragment {
 						// TODO Auto-generated method stub
 						if (!TextUtils.isEmpty(getdata.getAirPressure())) {
 							press = Float.valueOf(getdata.getAirPressure());
-							et_temp.setText(getdata.getAirPressure());
+							et_press.setText(getdata.getAirPressure());
 						}
 						if (!TextUtils.isEmpty(getdata.getCo2())) {
 							co = Float.valueOf(getdata.getCo2());
@@ -237,9 +237,9 @@ public class BaseFragment extends Fragment {
 						if (!TextUtils.isEmpty(getdata.getStateHumanInfrared())) {
 							per = Float.valueOf(getdata.getStateHumanInfrared());
 							if (per == 1) {
-								et_temp.setText("有人");
+								et_per.setText("有人");
 							} else {
-								et_temp.setText("无人");
+								et_per.setText("无人");
 							}
 						}
 					}

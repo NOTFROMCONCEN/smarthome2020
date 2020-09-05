@@ -56,7 +56,7 @@ public class BarActivity extends FragmentActivity {
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 
 		ControlUtils.setUser("bizideal", "123456",
-				LoginActivity.sharedPreferences.getString("ip", null));
+				"15.1.10.2");
 		SocketClient.getInstance().creatConnect();
 		SocketClient.getInstance().login(new LoginCallback() {
 
