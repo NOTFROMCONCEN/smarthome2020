@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cb_link_state"
+        android:layout_toRightOf="@+id/cb_link_state"
+        android:entries="@array/temp_smo" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinner1"
+        android:layout_toRightOf="@+id/spinner1"
+        android:entries="@array/big_small" />
+
+    <EditText
+        android:id="@+id/et_getdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinner2"
+        android:layout_toRightOf="@+id/spinner2"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_getdata"
+        android:layout_toRightOf="@+id/et_getdata"
+        android:entries="@array/fan_warm_lamp" />
+
+    <CheckBox
+        android:id="@+id/cb_link_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="154dp"
+        android:layout_marginTop="143dp"
+        android:text="当" />
+
+    <ToggleButton
+        android:id="@+id/tg_link_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinner3"
+        android:layout_marginLeft="89dp"
+        android:layout_toRightOf="@+id/spinner3"
+        android:text="ToggleButton"
+        android:textOff="开启自定义"
+        android:textOn="关闭自定义" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cb_link_state"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginTop="54dp"
+        android:layout_toLeftOf="@+id/tg_mode_state"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/ra_mode_af"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100sp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="安防模式" />
+
+        <RadioButton
+            android:id="@+id/ra_mode_hj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="回家模式" />
+    </RadioGroup>
+
+    <ToggleButton
+        android:id="@+id/tg_mode_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tg_link_state"
+        android:layout_alignTop="@+id/radioGroup1"
+        android:text="ToggleButton"
+        android:textOff="开启模式"
+        android:textOn="关闭模式" />
+
+</RelativeLayout>
