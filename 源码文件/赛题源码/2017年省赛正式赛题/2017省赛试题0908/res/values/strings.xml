@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">2017省赛试题0908</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+    <string-array name="user">
+        <item>家长</item>
+        <item>儿童</item>
+    </string-array>
+    <string-array name="big_small">
+        <item>></item>
+        <item>&lt;</item>
+    </string-array>
+    <string-array name="temp_smo">
+        <item>温度</item>
+        <item>烟雾</item>
+    </string-array>
+    <string-array name="fan_warm_lamp">
+        <item>风扇</item>
+        <item>报警灯</item>
+        <item>射灯</item>
+    </string-array>
+
+    <string name="title_section3">Section 3</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_activity_bar">BarActivity</string>
+
+</resources>

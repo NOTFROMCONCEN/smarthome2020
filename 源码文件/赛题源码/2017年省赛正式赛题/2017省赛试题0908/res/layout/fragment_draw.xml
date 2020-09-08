@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.example.shengsaishiti20170908.fragment.MyView
+        android:id="@+id/myview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.example.shengsaishiti20170908.fragment.MyView>
+
+    <CheckBox
+        android:id="@+id/cb_hum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="105dp"
+        android:layout_marginTop="101dp"
+        android:text="湿度" />
+
+    <CheckBox
+        android:id="@+id/cb_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cb_hum"
+        android:layout_below="@+id/cb_hum"
+        android:text="温度" />
+
+    <CheckBox
+        android:id="@+id/cb_gas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cb_temp"
+        android:layout_below="@+id/cb_temp"
+        android:text="燃气" />
+
+    <CheckBox
+        android:id="@+id/cb_smo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cb_gas"
+        android:layout_below="@+id/cb_gas"
+        android:text="烟雾" />
+
+    <ToggleButton
+        android:id="@+id/tg_draw_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cb_smo"
+        android:layout_below="@+id/cb_smo"
+        android:layout_marginTop="61dp"
+        android:text="ToggleButton"
+        android:textOff="开始绘图"
+        android:textOn="关闭绘图" />
+
+</RelativeLayout>
