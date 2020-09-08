@@ -41,6 +41,27 @@ public class BaseFragment extends Fragment {
 			line_kt.setVisibility(View.GONE);
 			line_tv.setVisibility(View.GONE);
 		}
+		
+		
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				while (true) {
+					ControlUtils.control(ConstantUtil.Lamp,ConstantUtil.CHANNEL_2, ConstantUtil.OPEN);
+					ControlUtils.control(ConstantUtil.Lamp,ConstantUtil.CHANNEL_2, ConstantUtil.CLOSE);
+					try {
+						Thread.sleep(500);
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+					ControlUtils.control(ConstantUtil.Lamp,ConstantUtil.CHANNEL_1, ConstantUtil.OPEN);
+					ControlUtils.control(ConstantUtil.Lamp,ConstantUtil.CHANNEL_1, ConstantUtil.CLOSE);
+				}
+			}
+		}).start();
+		
 		tg_cur.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
