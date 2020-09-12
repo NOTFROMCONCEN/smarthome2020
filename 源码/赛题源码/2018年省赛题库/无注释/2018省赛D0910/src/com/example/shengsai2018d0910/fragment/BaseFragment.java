@@ -69,7 +69,7 @@ public class BaseFragment extends Fragment {
 							ConstantUtil.CHANNEL_1, ConstantUtil.OPEN);
 				} else {
 					ControlUtils.control(ConstantUtil.Curtain,
-							ConstantUtil.CHANNEL_2, ConstantUtil.OPEN);
+							ConstantUtil.CHANNEL_3, ConstantUtil.OPEN);
 				}
 			}
 		});
