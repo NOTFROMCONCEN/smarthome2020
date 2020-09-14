@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IndexActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_room_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="房间管理" />
+
+            <View
+                android:id="@+id/view_base"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:background="#00FFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_room_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="房间控制" />
+
+            <View
+                android:id="@+id/view_control"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:background="#00FFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_room_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="联动管理" />
+
+            <View
+                android:id="@+id/view_link"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:background="#00FFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_room_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="温度趋势" />
+
+            <View
+                android:id="@+id/view_temp"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:background="#00FFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="200sp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ll_top"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="#00FF00" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可入住"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="#CDCDCD" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未打扫"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="#FF0000" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已入住"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_index"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/ll_left"
+        android:layout_toLeftOf="@+id/ll_left"
+        android:orientation="vertical" >
+
+        <include layout="@layout/in_index_rooms" />
+    </LinearLayout>
+
+</RelativeLayout>
