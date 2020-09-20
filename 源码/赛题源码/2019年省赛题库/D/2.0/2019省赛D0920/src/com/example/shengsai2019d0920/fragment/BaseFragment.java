@@ -104,5 +104,7 @@ public class BaseFragment extends Fragment {
 		tv_press = (TextView) view.findViewById(R.id.tv_press);
 		tv_smo = (TextView) view.findViewById(R.id.tv_smo);
 		tv_temp = (TextView) view.findViewById(R.id.tv_temp);
+		iv_hum = (ImageView) view.findViewById(R.id.iv_hum);
+		iv_temp = (ImageView) view.findViewById(R.id.iv_temp);
 	}
 }
