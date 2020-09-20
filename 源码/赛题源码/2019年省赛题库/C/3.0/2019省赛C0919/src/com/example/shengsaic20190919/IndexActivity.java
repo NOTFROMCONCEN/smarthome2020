@@ -25,6 +25,15 @@ import com.bizideal.smarthome.socket.SocketClient;
 import com.example.shengsaic20190919.toools.DiyToast;
 import com.example.shengsaic20190919.toools.LinkAdapterHelper;
 
+/**
+ * @author Administrator
+ * @year 2020
+ * @Todo TODO 基本界面、数据采集、设备控制、联动模式
+ * @package_name com.example.shengsaic20190919
+ * @project_name 2019省赛C0919
+ * @file_name IndexActivity.java
+ * @我的博客 https://naiyouhuameitang.club/
+ */
 public class IndexActivity extends Activity {
 
 	private TextView tv_temp, tv_hum, tv_press, tv_smo, tv_gas, tv_per, tv_ill,
@@ -45,9 +54,10 @@ public class IndexActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_index);
-		initView();
-		initWeb();initData();
-		set_spinner();
+		initView();// 控件绑定
+		initWeb();// 联网
+		set_spinner();// 设置Spinner样式
+		// 温度模式
 		cb_temp.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -103,6 +113,7 @@ public class IndexActivity extends Activity {
 				}
 			}
 		});
+		// 旅游模式
 		cb_lv.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -152,6 +163,7 @@ public class IndexActivity extends Activity {
 				}
 			}
 		});
+		// 安防模式
 		cb_af.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -194,6 +206,7 @@ public class IndexActivity extends Activity {
 				}
 			}
 		});
+		// 开启设备连接状态界面
 		btn_server_link.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -202,6 +215,7 @@ public class IndexActivity extends Activity {
 
 			}
 		});
+		// dvd
 		btn_dvd.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -211,6 +225,7 @@ public class IndexActivity extends Activity {
 						ConstantUtil.OPEN);
 			}
 		});
+		// 空调
 		btn_kt.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -220,6 +235,7 @@ public class IndexActivity extends Activity {
 						ConstantUtil.OPEN);
 			}
 		});
+		// 电视
 		btn_tv.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -229,6 +245,7 @@ public class IndexActivity extends Activity {
 						ConstantUtil.OPEN);
 			}
 		});
+		// 窗帘关
 		btn_cur_cls.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -238,6 +255,7 @@ public class IndexActivity extends Activity {
 						ConstantUtil.CHANNEL_2, ConstantUtil.OPEN);
 			}
 		});
+		// 窗帘开
 		btn_cur_open.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -247,6 +265,7 @@ public class IndexActivity extends Activity {
 						ConstantUtil.CHANNEL_1, ConstantUtil.OPEN);
 			}
 		});
+		// 窗帘停止
 		btn_cur_stop.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -256,6 +275,7 @@ public class IndexActivity extends Activity {
 						ConstantUtil.CHANNEL_3, ConstantUtil.OPEN);
 			}
 		});
+		// 门禁
 		tg_door.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -270,6 +290,7 @@ public class IndexActivity extends Activity {
 				}
 			}
 		});
+		// 风扇
 		tg_fan.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -285,6 +306,7 @@ public class IndexActivity extends Activity {
 				}
 			}
 		});
+		// 报警灯
 		tg_warm.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -300,6 +322,7 @@ public class IndexActivity extends Activity {
 				}
 			}
 		});
+		// 射灯
 		tg_lamp.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -316,6 +339,7 @@ public class IndexActivity extends Activity {
 				}
 			}
 		});
+		// 自定义模式
 		cb_diy.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -329,6 +353,7 @@ public class IndexActivity extends Activity {
 				}
 			}
 		});
+		// 开启线程
 		handler_diy.post(timeRunnable_diy);
 	}
 
@@ -546,7 +571,7 @@ public class IndexActivity extends Activity {
 
 	private void initWeb() {
 		// TODO Auto-generated method stub
-		ControlUtils.setUser("bizideal", "123456", SocketClient.ip);
+		ControlUtils.setUser("bizideal", "123465", SocketClient.ip);
 		SocketClient.getInstance().creatConnect();
 		SocketClient.getInstance().login(new LoginCallback() {
 
@@ -560,9 +585,10 @@ public class IndexActivity extends Activity {
 						// TODO Auto-generated method stub
 						if (arg0.equals(ConstantUtil.SUCCESS)) {
 							DiyToast.showToast(getApplicationContext(), "组网成功");
-							
+							initData();
 						} else {
 							DiyToast.showToast(getApplicationContext(), "组网失败");
+							initData();
 						}
 					}
 				});
