@@ -1,4 +1,4 @@
-package com.example.shengsaic07022019.tools;
+package com.example.guosaia2019a0923.tools;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class LinkAdapterHelper extends ArrayAdapter<String> {
+public class SpinnerBaseAdapter extends ArrayAdapter<String> {
 
-	String[] mStrings;
+	String[] mString;
 	Context mContext;
 
-	public LinkAdapterHelper(Context context, String[] strings) {
+	public SpinnerBaseAdapter(Context context, String[] strings) {
 		super(context, android.R.layout.simple_spinner_item, strings);
 		// TODO Auto-generated constructor stub
-		mStrings = strings;
-		mContext = context;
+		this.mContext = context;
+		this.mString = strings;
 	}
 
 	@Override
@@ -25,10 +25,10 @@ public class LinkAdapterHelper extends ArrayAdapter<String> {
 		// TODO Auto-generated method stub
 		if (convertView == null) {
 			convertView = LayoutInflater.from(mContext).inflate(
-					android.R.layout.simple_spinner_item, parent, false);
+					android.R.layout.simple_spinner_item, null, false);
 		}
 		TextView tv = (TextView) convertView.findViewById(android.R.id.text1);
-		tv.setText(mStrings[position]);
+		tv.setText(mString[position]);
 		tv.setTextColor(Color.WHITE);
 		return convertView;
 	}
@@ -38,12 +38,12 @@ public class LinkAdapterHelper extends ArrayAdapter<String> {
 		// TODO Auto-generated method stub
 		if (convertView == null) {
 			convertView = LayoutInflater.from(mContext).inflate(
-					android.R.layout.simple_spinner_dropdown_item, parent,
-					false);
+					android.R.layout.simple_spinner_dropdown_item, null, false);
 		}
 		TextView tv = (TextView) convertView.findViewById(android.R.id.text1);
-		tv.setText(mStrings[position]);
+		tv.setText(mString[position]);
 		tv.setTextColor(Color.BLACK);
 		return convertView;
 	}
+
 }
