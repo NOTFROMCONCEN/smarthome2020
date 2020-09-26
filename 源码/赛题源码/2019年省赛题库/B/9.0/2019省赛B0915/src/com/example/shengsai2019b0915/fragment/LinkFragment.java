@@ -173,7 +173,6 @@ public class LinkFragment extends Fragment {
 	}
 
 	private void check_data() {
-
 		final String spinner_1 = sp_1.getSelectedItem().toString();
 		final String spinner_2 = sp_2.getSelectedItem().toString();
 		final int number_get = Integer.valueOf(et_number.getText().toString());
@@ -317,7 +316,6 @@ public class LinkFragment extends Fragment {
 
 						@Override
 						public void run() {
-
 							btn_link_state.setText("关闭联动");
 						}
 					});
@@ -342,15 +340,25 @@ public class LinkFragment extends Fragment {
 
 				@Override
 				public void onTick(long millisUntilFinished) {
-
-					min = millisUntilFinished / 1000 / 60;
-					sec = millisUntilFinished / 1000 % 60;
-					tv_link_downtime.setText("联动模式还有" + min + "分" + sec + "秒");
+					if (link_state) {
+						min = millisUntilFinished / 1000 / 60;
+						sec = millisUntilFinished / 1000 % 60;
+						tv_link_downtime.setText("联动模式还有" + min + "分" + sec
+								+ "秒");
+					} else {
+						DiyToast.showToast(getActivity(), "条件不满足");
+						if (timer != null) {
+							timer.cancel();
+						}
+						tv_link_downtime.setText("联动模式还有X分X秒");
+						btn_link_state.setText("开启联动");
+						link_state = false;
+						close();
+					}
 				}
 
 				@Override
 				public void onFinish() {
-
 					if (timer != null) {
 						timer.cancel();
 					}
